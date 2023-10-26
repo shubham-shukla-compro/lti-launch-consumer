@@ -74,7 +74,7 @@ app.post('/lti-launch', (req, res) => {
             <body onload="document.forms[0].submit();">
                 <form action="https://cloud.santillanawicco.com/wiccoblti?WCSID=${courseId}"  method="POST">
                     ${formInputs}
-                    <input type="submit" value="Launch LTI Tool">
+                    <input type="submit" value="Launch LTI Tool" style="visibility:hidden">
                 </form>
             </body>
         </html>

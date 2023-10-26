@@ -22,7 +22,6 @@
     }
 
     h1 {
-      font-size: 24px;
       border-bottom: 2px solid #e5e5e5;
       padding-bottom: 10px;
       margin-bottom: 20px;
@@ -48,6 +47,10 @@
       margin-bottom: 5px;
       border-left: 4px solid #007bff;
       cursor: pointer;
+    }
+
+    .resource:hover {
+      background-color: rgba(0, 0, 0, 0.1);
     }
 
     .code {
@@ -87,10 +90,9 @@
       })
         .then(response => response.text())
         .then(html => {
-          const popup = window.open("", "ltiPopup", "width=800,height=600");
+          const popup = window.open("", "_blank");
           popup.document.write(html);
           popup.document.forms[0].submit();
-          console.log(popup.document.forms);
         });
     }
   </script>
@@ -98,12 +100,13 @@
 
 <body>
   <div class="container">
-    <h1>Courses</h1>
+    <h1>Santillana LTI Examples</h1>
 
     <div class="section">
       <div class="header">
-        <h2>Course “3 Primary-Science (no borrar - LMS)”</h2>
+        <h2>3 Primary-Science (no borrar - LMS)</h2>
       </div>
+      <h3>For teachers</h3>
       <div class="resource" onclick="launchCourse('685407', 'primary')">
         <span class="code">685407</span>
         <span>Audio 1</span>
@@ -120,6 +123,7 @@
         <span class="code">685412</span>
         <span>Interactive 1</span>
       </div>
+      <h3>For the student</h3>
       <div class="resource" onclick="launchCourse('685416', 'primary')">
         <span class="code">685416</span>
         <span>Video 1</span>
@@ -132,27 +136,29 @@
 
     <div class="section">
       <div class="header">
-        <h2>Course “3 Secondary-Biology (no borrar - LMS)”</h2>
+        <h2>3 Secondary-Biology (no borrar - LMS)</h2>
       </div>
+      <h3>For teachers</h3>
       <div class="resource" onclick="launchCourse('685408', 'secondary')">
         <span class="code">685408</span>
         <span>Audio 1</span>
-      </div>
-      <div class="resource" onclick="launchCourse('685410', 'secondary')">
-        <span class="code">685410</span>
-        <span>Document 1</span>
       </div>
       <div class="resource" onclick="launchCourse('685413', 'secondary')">
         <span class="code">685413</span>
         <span>Interactive 1</span>
       </div>
-      <div class="resource" onclick="launchCourse('685414', 'secondary')">
-        <span class="code">685414</span>
-        <span>Interactive 2</span>
-      </div>
       <div class="resource" onclick="launchCourse('685415', 'secondary')">
         <span class="code">685415</span>
         <span>Document 2</span>
+      </div>
+      <h3>For the student</h3>
+      <div class="resource" onclick="launchCourse('685410', 'secondary')">
+        <span class="code">685410</span>
+        <span>Document 1</span>
+      </div>
+      <div class="resource" onclick="launchCourse('685414', 'secondary')">
+        <span class="code">685414</span>
+        <span>Interactive 2</span>
       </div>
       <div class="resource" onclick="launchCourse('685417', 'secondary')">
         <span class="code">685417</span>
